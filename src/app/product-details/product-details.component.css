@@ -1,0 +1,74 @@
+img {
+    border-radius: 10px;
+    width: 320px;
+  }
+  
+  .select-input {
+    width: 108px; 
+    margin-bottom: 8px;
+    
+    height: 30px;
+  }
+  
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    
+  }
+  
+  .detail-item {
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  
+  .back-link {
+   
+    color: #1288cc;
+  }
+
+  h3 {
+    font-family: fantasy;
+    font-weight: lighter;
+  }
+
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+  }
+
+
+  button {
+    background-color: #1288cc; 
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 8px;
+    cursor: pointer;
+  
+  }
+  
+
+  .arrow {
+    border: solid #1288cc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  .thebutton {
+    display: block;
+  }
+
+  

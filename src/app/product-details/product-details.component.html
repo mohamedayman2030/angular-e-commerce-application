@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="detail-container">
+<img src={{theproducts[theID-1]?.url}}>
+<div class="detail-item">
+    
+<h1>{{theproducts[theID-1].name}}</h1>
+<h3>${{theproducts[theID-1].price}}</h3>
+<h3>{{theproducts[theID-1].description}}</h3>
+
+
+
+
+    <select name="amount" class="select-input" ngModel='1'  (ngModelChange)="ChooseAmount($event)" >
+        <option  *ngFor="let a of theamount" [value]='a'>{{a}}</option>
+    
+    </select>
+    
+    <div class="thebutton">
+    <button type="button" (click)="AddtoCart(theproducts[theID-1].id,theproducts[theID-1].url,theproducts[theID-1].name,theproducts[theID-1].price)">Add to cart</button>
+
+    
+</div>
+<br>
+
+<a class="back-link" routerLink="/"> <i class="arrow left"></i>Back to product list</a>
+
+</div>
+
+
+
+
+</div>

@@ -1,0 +1,17 @@
+
+
+
+<div class="product-index">
+<div class="product-container1">
+   <a routerLink='/product/{{theproducts.id}}'><img src={{theproducts.url}} class="product-image"></a>
+    <h3>{{theproducts.name}}</h3>
+    <h3>${{theproducts.price}}</h3>
+    
+    <select name="thevalue" class="select-input"  ngModel='1'  (ngModelChange)="ChooseAmount($event)"  >
+        <option  *ngFor="let a of theamount"  [value]='a'  >{{a}}</option>
+
+    </select>
+
+    <button type="button" (click)="addedtocart(theproducts.id,theproducts.url,theproducts.name,theproducts.price)">Add to cart</button>
+</div>
+</div>

@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="empty-cart-message" *ngIf="theCarts.length===0">
+    
+    <p>we have great products, check now and fill the cart! </p>
+    
+</div>
+
+
+
+
+<div class='cart-container'  *ngIf="theCarts.length!==0"> 
+
+    <div class='cart-item-details'>
+
+    <div class='cart-item' *ngFor="let cart of theCarts">
+
+        
+            <img src={{cart.url}} >
+            <div class="cart-panel"> 
+                
+                <h4 style="font-weight: bolder;">{{ cart.name }}</h4>
+                <h4 style="font-weight: lighter;"> ${{cart.price}}</h4>
+                <div class="container">
+                    
+                    <button (click)='decrease(cart)' class='amount'>-</button>
+                    <input type='text' value={{cart.amount}} min="0" max="10" readonly class="number-input">
+                    <button (click)="increase(cart)" class='amount'>+</button>
+                    
+                </div>
+      
+      
+            
+        
+    </div>
+   
+    </div>
+    <p id='price'>Total: ${{totalprice.toFixed(2)}}</p>
+</div>
+   
+
+    
+    <form #form="ngForm"  class="form-margin" (click)="sendCustomer()" >
+        <br>
+        <span>Full name </span>
+        <br>
+        <input placeholder=" (Minimum 3 characters)" name="thename"  required minlength="3" type="text"  [(ngModel)]="fullname" class='forminput'>
+        <br>
+        <span>Address </span>
+        <br>
+        <input placeholder=" (Minimum 6 characters)" name="address" type="text" required minlength="6" [(ngModel)]="address" class='forminput'>
+        <br>
+        <span>Credit card number </span>
+        <br>
+        <input placeholder=" (Minimum 16 digits)" name="card" type="text" required minlength="16" [(ngModel)]="card" class='forminput'>
+        <br>
+       
+        
+
+        
+        <h5 style="font-size: 17px; color: rgb(83, 83, 83); margin-top: 8px;" >we'll never share your payment details with anyone else</h5>
+        <button class="thebutton" routerLink="/confirmation" [disabled]='form.invalid' >Submit</button>
+    </form>
+
+</div> 
+
+
